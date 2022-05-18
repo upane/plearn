@@ -12,6 +12,7 @@ import static java.util.stream.Collectors.toList;
 
 /**
  * Description: java8 lambda
+ * 第五章 习题
  *
  * @Author:pan
  * @Date:2022/5/18
@@ -134,7 +135,8 @@ public class Trader {
         System.out.println(min);
         // amazing 结果参数都相同
 
-        // 亏贼 steam略有小成
+        // 亏贼 lambda略有小成
+        // 小小小成 后面好难。
     }
 
 }
