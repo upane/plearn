@@ -34,5 +34,23 @@ public class PascalTriangle {
             }
             return ret;
         }
+
+
+        // 获取单行  只想到这了 懒得看其他解法 费脑子
+        public List<Integer> getRow(int rowIndex) {
+            List<Integer> res = new ArrayList<Integer>();
+            for (int i = 0; i <= rowIndex; i++) {
+                List<Integer> temp = new ArrayList<>();
+                for (int j = 0; j <= i; j++) {
+                    if (j == 0 || i == j) {
+                        temp.add(1);
+                    } else {
+                        temp.add(res.get(j - 1) + res.get(j));
+                    }
+                }
+                res = temp;
+            }
+            return res;
+        }
     }
 }
