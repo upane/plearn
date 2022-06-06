@@ -28,7 +28,21 @@ public class RemoveNthFromEnd {
     /**
      * Definition for singly-linked list.
      */
-    public class ListNode {
+    public static void main(String[] args) {
+        ListNode myLinkedList6 = new ListNode(6);
+        ListNode myLinkedList5 = new ListNode(5, myLinkedList6);
+        ListNode myLinkedList4 = new ListNode(4, myLinkedList5);
+        ListNode myLinkedList3 = new ListNode(3, myLinkedList4);
+        ListNode myLinkedList2 = new ListNode(2, myLinkedList3);
+        ListNode myLinkedList1 = new ListNode(1, myLinkedList2);
+
+        RemoveNthFromEnd removeNthFromEnd = new RemoveNthFromEnd();
+        ListNode listNode = removeNthFromEnd.removeNthFromEnd(myLinkedList1, 2);
+        System.out.println(listNode);
+
+    }
+
+    public static class ListNode {
         int val;
         ListNode next;
 
@@ -45,7 +59,6 @@ public class RemoveNthFromEnd {
         }
     }
 
-    class Solution {
         public ListNode removeNthFromEnd(ListNode head, int n) {
             ListNode dump = new ListNode(0, head);
             ListNode slow = dump;
@@ -62,5 +75,4 @@ public class RemoveNthFromEnd {
             ListNode ans = dump.next;
             return ans;
         }
-    }
 }
